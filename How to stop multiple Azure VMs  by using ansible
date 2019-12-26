@@ -1,0 +1,15 @@
+---
+- name: Stop Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Stop virtual machine
+      azure_rm_virtualmachine:
+        resource_group: TestVMs
+        name: "{{ item }}"
+        admin_username: aparida
+        admin_password: Password@12345
+        allocated: no
+      with_items:
+          - Test001
+          - VM-2
