@@ -1,0 +1,13 @@
+---
+- name: Mount the managed disk to VM
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Mount the managed disk to VM
+     azure_rm_manageddisk:
+      name: mymanageddisk-2020
+      location: centralus
+      resource_group: Test-1
+      disk_size_gb: 4
+      managed_by: Odisha-VM1
+      attach_caching: read_only

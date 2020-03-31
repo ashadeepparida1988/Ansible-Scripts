@@ -1,0 +1,10 @@
+---
+- name: Create managed disk
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Delete a resource group including resources it contains
+     azure_rm_resourcegroup:
+       name: Test-1
+       force_delete_nonempty: yes
+       state: absent
