@@ -1,0 +1,13 @@
+---
+- name: Delete a Resource group
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Delete a resource group
+     azure_rm_resourcegroup:
+        name: azure-ansible-01
+        location: eastus
+        state: absent
+        tags:
+          environment: Dev
+          Owner: Ashadeep
