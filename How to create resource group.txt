@@ -1,0 +1,12 @@
+---
+- name: Creating Resourcegroup
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Create resource group
+     azure_rm_resourcegroup:
+        name: azure-ansible-01
+        location: eastus
+        tags:
+          environment: Dev
+          Owner: Ashadeep
