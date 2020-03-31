@@ -1,0 +1,11 @@
+---
+- name: Create managed disk
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Create managed disk
+     azure_rm_manageddisk:
+      name: mymanageddisk-2020
+      location: eastus
+      resource_group: Test-1
+      disk_size_gb: 4
