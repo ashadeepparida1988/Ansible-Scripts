@@ -1,5 +1,5 @@
 ---
-- name: Create managed disk
+- name: Delete Resource Group Forcefully
   hosts: localhost
   connection: local
   tasks:
